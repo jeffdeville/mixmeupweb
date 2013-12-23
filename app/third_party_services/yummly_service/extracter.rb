@@ -26,7 +26,5 @@ module YummlyService
         select{|recipe| !recipe["id"].blank? }.
         select{|recipe| !recipe["imageUrlsBySize"].blank? }
     end
-
-
   end
 end
