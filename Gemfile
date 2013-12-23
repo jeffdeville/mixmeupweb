@@ -34,11 +34,11 @@ group :development do
   gem 'rb-fchange', :require=>false
   gem 'rb-fsevent', :require=>false
   gem 'rb-inotify', :require=>false
-  gem 'vcr'
-  gem 'webmock'
   gem 'fuubar'
 end
 group :development, :test do
+  gem 'vcr'
+  gem 'webmock'
   gem 'factory_girl_rails'
   gem 'rspec-rails'
   gem 'pry'
