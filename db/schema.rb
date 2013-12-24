@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 20131223192346) do
     t.integer  "drinks_id"
     t.string   "units"
     t.decimal  "quantity"
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

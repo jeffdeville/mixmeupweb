@@ -10,9 +10,9 @@ describe YummlyService::Extracter do
 
     it "should have loaded all of the recipes from yummly with vodka" do
       expect(@recipes.length).to be >= 50
-      expect(@recipes).to have_ingredients
-      expect(@recipes).to have_ids
-      expect(@recipes).to have_pictures
+      expect(@recipes).to have_yummly_ingredients
+      expect(@recipes).to have_yummly_ids
+      expect(@recipes).to have_yummly_pictures
     end
   end
 
@@ -26,11 +26,11 @@ describe YummlyService::Extracter do
       }
 
       it "should load the recipe in its entirety" do
-        expect(@recipe).to have_ingredient_lines
-        expect(@recipe).to have_recipe_pictures
-        expect(@recipe).to have_yield
-        expect(@recipe).to have_rating
-        expect(@recipe).to have_attribution
+        expect(@recipe).to have_yummly_ingredient_lines
+        expect(@recipe).to have_yummly_recipe_pictures
+        expect(@recipe).to have_yummly_yield
+        expect(@recipe).to have_yummly_rating
+        expect(@recipe).to have_yummly_attribution
       end
     end
 

@@ -23,6 +23,7 @@ class CreateDrinksTable < ActiveRecord::Migration
       t.references :drinks
       t.string :units
       t.decimal :quantity
+      t.string :name
 
       t.timestamps
     end
