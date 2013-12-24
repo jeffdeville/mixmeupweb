@@ -11,7 +11,7 @@ module YummlyService
     end
 
     def cache
-      Alcohol.primary.pluck(:name).map(&:downcase).each do |alcohol|
+      Alcohol.primary_alcohols.each do |alcohol|
         recipes = VCR.use_cassette("yummly", record: :new_episodes) do
           YummlyService::Extracter.find_drinks_with(alcohol: alcohol)
         end
