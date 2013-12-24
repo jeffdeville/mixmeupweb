@@ -12,9 +12,7 @@ module YummlyService
 
     def cache
       Alcohol.primary_alcohols.each do |alcohol|
-        recipes = VCR.use_cassette("yummly", record: :new_episodes) do
-          YummlyService::Extracter.find_drinks_with(alcohol: alcohol)
-        end
+        recipes = recipes_for_alcohol(alcohol)
 
         VCR.use_cassette("yummly_get", record: :new_episodes) do
           recipes.each do |recipe|
@@ -43,6 +41,12 @@ module YummlyService
 
     def db
       @db ||= YummlyService::Cacher.new
+    end
+
+    def recipes_for(alcohol)
+      VCR.use_cassette("yummly", record: :new_episodes) do
+        YummlyService::Extracter.find_drinks_with(alcohol: alcohol)
+      end
     end
   end
 end
