@@ -19,6 +19,7 @@ gem 'bson_ext'
 gem 'yummly'
 gem 'sdoc', group: :doc, require: false
 gem "phys-units"
+gem 'fatsecret-api', git: "git://github.com/whistler/Fatsecret", ref: "4335685e41d35fab7bb3d0e173909beb9713fc0e", require: 'fatsecret'
 
 group :development do
   gem 'spring'

@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/whistler/Fatsecret
+  revision: 4335685e41d35fab7bb3d0e173909beb9713fc0e
+  ref: 4335685e41d35fab7bb3d0e173909beb9713fc0e
+  specs:
+    fatsecret-api (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -302,6 +309,7 @@ DEPENDENCIES
   devise
   email_spec
   factory_girl_rails
+  fatsecret-api!
   fuubar
   guard-bundler
   guard-rails
