@@ -59,6 +59,9 @@ module YummlyService
         attribution_url: recipe.attribution.url,
         attribution_text: recipe.attribution.text,
         attribution_html: recipe.attribution.html,
+        photos_attributes: get_photos(recipe),
+        proof: get_proof(recipe),
+        girliness: -1,
       }
     end
 
@@ -75,6 +78,22 @@ module YummlyService
       alcohols.inject([]) do |acc, alcohol|
         acc  << alcohol if recipe.ingredient_lines.any?{|line| /#{alcohol}/i =~ line }
       end
+    end
+
+    def get_photos(recipe)
+      recipe.images.map do |image|
+        {
+          photo_versions_attributes: [
+            { height: 60, width: 90, url: image.small_url },
+            { height: 120, width: 180, url: image.small_url },
+            { height: 240, width: 360, url: image.large_url },
+          ]
+        }
+      end
+    end
+
+    def get_proof(recipe)
+
     end
   end
 end

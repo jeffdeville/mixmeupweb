@@ -1,6 +1,7 @@
 module YummlyService
   class SearchParameterEnumerator
     include Enumerable
+    include PageEnumerator
     PAGE_SIZE = 40
     attr_accessor :alcohol, :course
 
@@ -21,14 +22,6 @@ module YummlyService
           maxResult: PAGE_SIZE, start: PAGE_SIZE * page_number
         }
         yield params
-      end
-    end
-
-    private
-
-    def for_all_pages
-      (0..Float::INFINITY).each do |page_number|
-        yield page_number
       end
     end
   end

@@ -39,6 +39,33 @@ describe YummlyService::Transform do
     end
   end
 
+  RSpec::Matchers.define :have_photos do
+    match do |recipe_hash|
+      pp recipe_hash
+      photos = get_photos(recipe_hash)
+      get_photos(recipe_hash).present? &&
+        get_photos(recipe_hash).all?{|photo| get_photo_versions(photo).count == 3 }
+
+    end
+
+    failure_message_for_should do |recipe_hash|
+      if get_photos(recipe_hash).empty?
+        "No photos included"
+      else
+        "Photos did not include all of #{%i(type url)}. Photos: #{get_photos(recipe_hash)}"
+      end
+    end
+
+    def get_photos(recipe_hash)
+      recipe_hash.fetch(:photos_attributes, [])
+    end
+
+    def get_photo_versions(photo_versions_hash)
+      photo_versions_hash.fetch(:photo_versions_attributes, [])
+    end
+  end
+
+
   describe ".call" do
     before {
       Alcohol.create(name: 'vodka', is_primary: true)
@@ -60,7 +87,17 @@ describe YummlyService::Transform do
           html: "<a href=''http://www.yummly.com/recipe/Limoncello-II-AllRecipes''>Limoncello II recipe</a> information powered by <img alt=''Yummly'' src=''http://static.yummly.com/api-logo.png''/>",
           url: "http://www.yummly.com/recipe/Limoncello-II-AllRecipes",
           text: "Limoncello II recipes: information powered by Yummly"
-        }
+        },
+        images:[
+          {
+            imageUrlsBySize: {
+              "90" => "http://lh6.ggpht.com/zM1pnIS5cjUr-D0nNkvEWuMUxmWw1uJ9ZtlMcTuK7wCztJPslK_tDAFjJPvGwrQNTyjJdQREPwnfDbXIsAHd=s90-c",
+              "360" => "http://lh6.ggpht.com/zM1pnIS5cjUr-D0nNkvEWuMUxmWw1uJ9ZtlMcTuK7wCztJPslK_tDAFjJPvGwrQNTyjJdQREPwnfDbXIsAHd=s360-c"
+            },
+            hostedLargeUrl: "http://i.yummly.com/Limoncello-II-AllRecipes-78937.l.png",
+            hostedSmallUrl:"http://i.yummly.com/Limoncello-II-AllRecipes-78937.s.png"
+          }
+        ]
       }
     }
 
