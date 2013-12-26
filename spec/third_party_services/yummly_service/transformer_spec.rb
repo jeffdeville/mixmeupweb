@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe YummlyService::Transform do
+describe YummlyService::Transformer do
   RSpec::Matchers.define :have_calories do
     match do |recipe_hash|
       recipe_hash[:calories].to_i == recipe_hash[:calories] && recipe_hash[:calories] > 0
@@ -41,7 +41,6 @@ describe YummlyService::Transform do
 
   RSpec::Matchers.define :have_photos do
     match do |recipe_hash|
-      pp recipe_hash
       photos = get_photos(recipe_hash)
       get_photos(recipe_hash).present? &&
         get_photos(recipe_hash).all?{|photo| get_photo_versions(photo).count == 3 }
@@ -135,7 +134,7 @@ describe YummlyService::Transform do
   #   @lines = File.read("spec/third_party_services/yummly_service/ingredient_lines.txt").split("\n")
   #   @lines.each do |ingredient_line|
   #     it "should map #{ingredient_line}" do
-  #       expect(YummlyService::Transform).to extract_components_from(ingredient_line)
+  #       expect(YummlyService::Transformer).to extract_components_from(ingredient_line)
   #     end
   #   end
 

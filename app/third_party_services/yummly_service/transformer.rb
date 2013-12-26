@@ -45,7 +45,7 @@ module YummlyService
     end
   end
 
-  module Transform
+  module Transformer
     extend self
     def call(recipe_hash)
       recipe = Yummly::Recipe.new(recipe_hash.with_indifferent_access)

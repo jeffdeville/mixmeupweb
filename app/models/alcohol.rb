@@ -4,4 +4,8 @@ class Alcohol < ActiveRecord::Base
   def self.primary_alcohols
     Alcohol.primary.pluck(:name).map(&:downcase)
   end
+
+  def has_proof?
+    proof.present?
+  end
 end

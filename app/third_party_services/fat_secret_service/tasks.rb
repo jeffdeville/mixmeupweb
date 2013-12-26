@@ -3,12 +3,15 @@ module FatSecretService
     extend self
 
     def cache
-      db.upsert(FatSecretService::Extracter.get_alcohols)
+      FatSecretService::Extracter.get_alcohols do |alcohol|
+        alcohol["_id"] = alcohol["food_url"]
+        db.upsert(alcohol)
+      end
     end
 
     def load
       db.alcohols.each do |alcohol_hash|
-        attributes = FatSecretService::Translator.map(alcohol_hash)
+        attributes = FatSecretService::Transformer.call(alcohol_hash)
         Alcohol.create attributes
       end
     end
