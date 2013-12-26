@@ -15,7 +15,7 @@ module YummlyService
     end
 
     def each &block
-      for_all_pages do |page_number|
+      SearchParameterEnumerator.for_all_pages do |page_number|
         params = {
           "allowedIngredient[]" => alcohol,
           "allowedCourse[]" => course,

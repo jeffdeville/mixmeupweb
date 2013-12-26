@@ -6,13 +6,15 @@ module YummlyService
     def initialize
       @client = MongoClient.from_uri(Rails.application.secrets.mongo_uri).db
     end
-
+    def recipes_collection
+      @client.collection(COLLECTION)
+    end
     def upsert(recipe_hash)
-      @client.collection(COLLECTION).insert(recipe_hash.merge({_id: recipe_hash["id"]}))
+      recipes_collection.insert(recipe_hash.merge({_id: recipe_hash["id"]}))
     end
 
     def get(id)
-      @client.collection(COLLECTION).find_one({_id: id})
+      recipes_collection.find_one({_id: id})
     end
 
     def exists?(id)
@@ -20,7 +22,11 @@ module YummlyService
     end
 
     def recipes
-     @client.collection(COLLECTION).find()
+     recipes_collection.find()
+    end
+
+    def clear
+      recipes_collection.remove
     end
   end
 end

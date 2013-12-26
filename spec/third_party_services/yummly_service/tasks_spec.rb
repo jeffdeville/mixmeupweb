@@ -1,19 +1,13 @@
 require 'spec_helper'
 
 describe YummlyService::Tasks, slow: true do
-  let(:db) { Mongo::MongoClient.from_uri(Rails.application.secrets.mongo_uri).db }
-  before { db.collection(YummlyService::Cacher::COLLECTION).remove }
-
+  let(:cache) { YummlyService::Cacher.new }
   describe  ".cache" do
     before { create :vodka }
-    before do
-      VCR.use_cassette("yummly") do
-        YummlyService::Tasks.cache
-      end
-    end
+    before { YummlyService::Tasks.cache }
 
     it "should search for all of the vodka drinks, and load them into mongo" do
-      expect(db.collection("recipes").count).to be > 0
+      expect(cache.recipes).to have_at_least(10).recipes
     end
   end
 end

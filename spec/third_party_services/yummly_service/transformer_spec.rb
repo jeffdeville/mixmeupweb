@@ -45,8 +45,10 @@ describe YummlyService::Transformer do
       expect(recipe_attributes).to have_alcohols
       expect(recipe_attributes).to have_attribution
       expect(recipe_attributes).to have_photos
-      expect(recipe_attributes).to have_proof
-      expect(recipe_attributes).to have_girliness
+      # Don't test for this, because this is a calculation that should rightly take place
+      # outside of the mapping from yummly, because the info comes form the ingredient lines
+      # expect(recipe_attributes).to have_proof
+      # expect(recipe_attributes).to have_girliness
     end
   end
   ###################################

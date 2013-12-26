@@ -6,6 +6,12 @@ FactoryGirl.define do
 
     factory :vodka, traits: [:primary] do
       name "Vodka"
+      proof 40
+    end
+
+    factory :weird_alcohol do
+      name "Prune Juice"
+      proof 1
     end
   end
 end
