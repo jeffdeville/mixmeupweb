@@ -53,6 +53,7 @@ module YummlyService
         name: recipe.name,
         calories: get_calories(recipe),
         instructions: recipe.ingredient_lines,
+        instructions_attributes: get_instructions(recipe),
         alcohols: get_alcohols(recipe),
         source: "yummly",
         source_id: recipe.id,
@@ -94,6 +95,15 @@ module YummlyService
 
     def get_proof(recipe)
 
+    end
+
+    def get_instructions(recipe)
+      recipe.ingredient_lines.map do |ingredient_line|
+        ysi = YummlyService::Ingredient.from_line(ingredient_line)
+        {
+          units: ysi.unit, quantity: ysi.quant, name: ysi.food
+        }
+      end
     end
   end
 end
