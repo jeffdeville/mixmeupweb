@@ -1,131 +1,203 @@
-Liquor / Cocktail / Liqueur,% Alc (ABV),Proof,Is Primary,Keywords,,
-Advocaat,17,34,FALSE,,,
-Aftershock,30,60,FALSE,,,
-Aftershock Cinnamon Schnapps,40,80,FALSE,,,
-Aftershock Cool Citrus Mint Schnapps,40,80,FALSE,,,
-Aguardiente,30,60,FALSE,,,
-Amadeus,5,10,FALSE,,,
-Amaretto,28,56,FALSE,,,
-Amaretto Di Saronno,28,56,FALSE,,,
-Amaro,17,34,FALSE,,,
-Amarula,17,34,FALSE,,,
-American Schnapps,40,80,FALSE,,,
-Anis del Toro,30,60,FALSE,,,
-Anisette,30,60,FALSE,,,
-Arak,50,100,FALSE,,,
-Ashanti Gold,17,34,FALSE,,,
-Aurum,40,80,FALSE,,,
-Baileys Irish Cream,17,34,FALSE,,,
-Bärenjäger,35,70,FALSE,,,
-Becherovka,38,76,FALSE,,,
-Beirão,22,44,FALSE,,,
-Benedictine,40,80,FALSE,,,
-Blue Curaçao,30,60,FALSE,,,
-Calisay,20,40,FALSE,,,
-Canton,28,56,FALSE,,,
-Chambord,17,34,FALSE,,,
-Chartreuse,55,110,FALSE,,,
-Cherry Heering,22,44,FALSE,,,
-Cloudberry Liqueur,25,50,FALSE,,,
-Coconut Rum,21,42,FALSE,,,
-Cointreau,40,80,FALSE,,,
-Crème de Banane,30,60,FALSE,,,
-Crème de Cacao,25,50,FALSE,,,
-Crème de Cassis,20,40,FALSE,,,
-Crème de Cerise,20,40,FALSE,,,
-Crème de Menthe,25,50,FALSE,,,
-Crème de Myrtille,20,40,FALSE,,,
-Crème de Noyaux,30,60,FALSE,,,
-Crème de Rose,18,36,FALSE,,,
-Crème de Violette,25,50,FALSE,,,
-Crème de Y'vette,28,56,FALSE,,,
-Curaçao,30,60,FALSE,,,
-Cynar,17,34,FALSE,,,
-Damiana,50,100,FALSE,,,
-Destinée,17,34,FALSE,,,
-Drambuie,40,80,FALSE,,,
-Drumgray Highland Cream Liqueur,17,34,FALSE,,,
-Dry Orange Curaçao,30,60,FALSE,,,
-Durango,9,18,FALSE,,,
-Framboise,5,10,FALSE,,,
-Frangelico,24,48,FALSE,,,
-Frigola,25,50,FALSE,,,
-Galliano,35,70,FALSE,,,
-Godiva Chocolate Liqueurs,17,34,FALSE,,,
-Goldschläger,44,88,FALSE,,,
-Goldwasser,40,80,FALSE,,,
-Grand Mariner,40,80,FALSE,,,
-Green Chartreuse,55,110,FALSE,,,
-Green Curaçao,30,60,FALSE,,,
-Herbsaint,30,60,FALSE,,,
-Highland Mist,20,40,FALSE,,,
-Hpnotiq,18,36,FALSE,,,
-Irish Cream,17,34,FALSE,,,
-Izarra,48,96,FALSE,,,
-Jägermeister,35,70,FALSE,,,
-Kahlúa,27,54,FALSE,,,
-Krupnik,40,80,FALSE,,,
-Kümmel,38,76,FALSE,,,
-Lazzaroni Amaretto,24,48,FALSE,,,
-Licor 43,31,62,FALSE,,,
-Limoncello,32,64,FALSE,,,
-Malibu,24,48,FALSE,,,
-Maraschino,40,80,FALSE,,,
-Mastica,47,94,FALSE,,,
-Melon Liqueur,23,46,FALSE,,,
-Metaxa,40,80,FALSE,,,
-Midori,23,46,FALSE,,,
-Mozart Chocolate Liqueurs,20,40,FALSE,,,
-Nocello,24,48,FALSE,,,
-Nocino,35,70,FALSE,,,
-Oghi,53,106,FALSE,,,
-Ouzo,40,80,FALSE,,,
-Parfait Amour,30,60,FALSE,,,
-Pastis,43,86,FALSE,,,
-Patxaran,30,60,FALSE,,,
-Peach Liqueur,23,46,FALSE,,,
-Pecher Mignon,18,36,FALSE,,,
-Pineau des Charentes,15,30,FALSE,,,
-Pisang Ambon,21,42,FALSE,,,
-Ponche Caribe,11,22,FALSE,,,
-Ponche Crema,15,30,FALSE,,,
-Ponche Diva,10,20,FALSE,,,
-Ponche Kuba,9,18,FALSE,,,
-Prunelle,15,30,FALSE,,,
-Raki,45,90,FALSE,,,
-Red Curaçao,31,62,FALSE,,,
-Rock and rye,27,54,FALSE,,,
-Rum Tree,24,48,FALSE,,,
-Rumple Minze,50,100,FALSE,,,
-Sabra liqueur,27,54,FALSE,,,
-Saint Brendan's,17,34,FALSE,,,
-Salmiakkikossu,40,80,FALSE,,,
-Sambuca,40,80,FALSE,,,
-Sheridan's,16,32,FALSE,,,
-Sloe gin,26,52,FALSE,,,
-Southern Comfort,35,70,FALSE,,,
-Starbucks Coffee Liqueur,20,40,FALSE,,,
-Starbucks Cream Liqueur,15,30,FALSE,,,
-Strega,40,80,FALSE,,,
-Tia Lusso (with cream),27,54,FALSE,,,
-Tia Maria,27,54,FALSE,,,
-Triple sec,30,60,FALSE,,,
-Tsipouro,40,80,FALSE,,,
-Vandermint,26,52,FALSE,,,
-Vermeer Dutch Chocolate Cream Liqueur,17,34,FALSE,,,
-Wallace Liqueur,35,70,FALSE,,,
-Xtabentún,40,80,FALSE,,,
-Yellow Chartreuse,40,80,FALSE,,,
-Yellow Curaçao,31,62,FALSE,,,
-Yukon Jack,50,100,FALSE,,,
-Vodka,40,80,TRUE,,,
-Bourbon,65,130,TRUE,,,
-Brandy,42.5,85,TRUE,,,
-Everclear,85,170,FALSE,,,
-Gin,37.5,75,TRUE,,,
-Rum,47.25,94.5,TRUE,,,
-Sake,15,30,FALSE,,,
-Tequila,45,90,TRUE,,,
-Vodka,42.5,85,TRUE,,,
-Whiskey,46.65,93.3,TRUE,,,
-German Schnapps,30,60,FALSE,,,
+Liquor / Cocktail / Liqueur,% Alc (ABV),Proof,Is Primary,Search Terms
+Absinthe,68,136,FALSE,absinthe
+Advocaat,17,34,FALSE,advocaat|egg liqueur
+Aftershock,30,60,FALSE,aftershock
+Aftershock Cinnamon Schnapps,40,80,FALSE,aftershock cinnamon schnapps
+Aftershock Cool Citrus Mint Schnapps,40,80,FALSE,aftershock cool citrus mint schnapps
+Aguardiente,30,60,FALSE,aguardiente
+Amadeus,5,10,FALSE,amadeus
+Amaretto,28,56,FALSE,amaretto
+Amaretto almond liqueur,28,56,FALSE,amaretto almond liqueur
+Amaretto Di Saronno,28,56,FALSE,amaretto di saronno
+Amaro,17,34,FALSE,amaro
+Amarula,17,34,FALSE,amarula
+American Schnapps,40,80,FALSE,american schnapps
+Angostura Bitters,44.7,89.4,FALSE,angostura bitters
+Anis del Toro,30,60,FALSE,anis del toro
+Anis liqueur,40,80,FALSE,anis
+Anisette,30,60,FALSE,anisette
+Apple Liqueur,20,40,FALSE,apple liqueur|apple schnapps|sour apple liqueur
+Apricot Liqueur,30,60,FALSE,apricot brandy liqueur|apricot schnapps|creme d'apricots
+Arak,50,100,FALSE,arak
+Artichoke liqueur,16.5,33,FALSE,artichoke liqueur|cynar
+Ashanti Gold,17,34,FALSE,ashanti gold
+Aurum,40,80,FALSE,aurum
+Baileys Irish Cream,17,34,FALSE,baileys irish cream
+Banana Liqueur,30,60,FALSE,banana liqueur|banana schnapps|creme de bananes|creme de banana
+Bärenjäger,35,70,FALSE,bärenjäger
+Becherovka,38,76,FALSE,becherovka
+Beirão,22,44,FALSE,beirão
+Benedictine,40,80,FALSE,benedictine
+Blackberry liqueur,35,70,FALSE,blackberry brandy|blackberry schnapps|creme de mure|jekyll berry liqueur
+Blue Curaçao,30,60,FALSE,blue curaçao
+Blueberry liqueur,20,40,FALSE,blueberry brandy|blueberry schnapps|creme de myrtille
+Bourbon,65,130,TRUE,bourbon
+Brandy,40,80,TRUE,brandy|cognac
+Butterscotch Liqueur,15,30,FALSE,butterscotch liqueur|butterscotch schnapps
+Cabernet,12,24,FALSE,cabernet
+Calisay,20,40,FALSE,calisay
+Campari,24,48,FALSE,campari
+Canton,28,56,FALSE,canton
+Captain Morgan Parrot Bay™ Coconut,90,180,FALSE,parrot bay
+Caramel liqueur,20,40,FALSE,caramel liqueur
+Caraway liqueur,40,80,FALSE,caraway liqueur
+Chambord,17,34,FALSE,chambord
+Champagne,17,34,FALSE,champagne
+Chartreuse,55,110,FALSE,chartreuse
+Cherry Heering,22,44,FALSE,cherry heering
+Cherry liqueur,25,50,FALSE,black cherry liqueur|cherry brandy|cherry schnapps|creme de cerise|creme de griotte|maraschino liqueur|wild cherry liqueur
+Chocolate liqueur,26,52,FALSE,chocolate liqueur|chocolate mint liqueur|creme de cacao|chocolate almond liqueur
+Cinnamon liqueur,40,80,FALSE,cinnamon liqueur
+Citrus Schnapps,15,30,FALSE,citrus schnapps
+Cloudberry Liqueur,25,50,FALSE,cloudberry liqueur
+Cloudberry liqueur,21,42,FALSE,cloudberry liqueur
+Coconut liqueur,20,40,FALSE,coconut liqueur|batida de coco|creme de coconut
+Coconut Rum,21,42,FALSE,coconut rum
+Coffee liqueur,35,70,FALSE,coffee liqueur|coffee brandy|coffee flavored liqueur
+Cointreau,40,80,FALSE,cointreau
+Cranberry liqueur,21,42,FALSE,cranberry liqueur
+Cream liqueur,17,34,FALSE,cream liqueur|irish cream
+Creme de almond,28,56,FALSE,creme de almond|créme de almond
+Crème de Banane,30,60,FALSE,crème de banane
+Crème de Cacao,25,50,FALSE,crème de cacao|créme de cacao|creme de cacao
+Crème de Cassis,20,40,FALSE,crème de cassis|créme de cassis
+Crème de Cerise,20,40,FALSE,crème de cerise|créme de cerise
+Creme de fraise,20,40,FALSE,creme de fraise|créme de fraise
+Crème de Menthe,25,50,FALSE,crème de menthe|créme de menthe
+Crème de Myrtille,20,40,FALSE,crème de myrtille|créme de myrtille
+Crème de Noyaux,30,60,FALSE,crème de noyaux|créme de noyaux
+Crème de Rose,18,36,FALSE,crème de rose|créme de rose
+Crème de Violette,25,50,FALSE,crème de violette|créme de violette
+Crème de Y'vette,28,56,FALSE,crème de y'vette|créme de y'vette
+Curaçao,30,60,FALSE,curaçao|curacao
+Cynar,17,34,FALSE,cynar
+Damiana,50,100,FALSE,damiana
+Destinée,17,34,FALSE,destinée
+Drambuie,40,80,FALSE,drambuie
+Drumgray Highland Cream Liqueur,17,34,FALSE,drumgray highland cream liqueur
+Dry Orange Curaçao,30,60,FALSE,dry orange curaçao
+Dry Vermouth,15,30,FALSE,vermouth
+Dry White Wine,7,14,FALSE,dry white wine
+Durango,9,18,FALSE,durango
+Everclear,85,170,FALSE,everclear
+Framboise,5,10,FALSE,framboise
+Frangelico,24,48,FALSE,frangelico
+Frigola,25,50,FALSE,frigola
+Galliano,35,70,FALSE,galliano
+German Schnapps,30,60,FALSE,german schnapps
+Gin,37.5,75,TRUE,gin
+Ginger liqueur,20,40,FALSE,ginger liqueur||domaine de canton
+Godiva Chocolate Liqueurs,17,34,FALSE,godiva chocolate liqueurs
+Goldschläger,44,88,FALSE,goldschläger
+Goldwasser,40,80,FALSE,goldwasser
+Grand Marnier,40,80,FALSE,grand mariner|grand marnier
+Grape liqueur,15,30,FALSE,grape liqueur||creme d'armagnac|grape schnapps
+Grapefruit liqueur,20,40,FALSE,grapefruit liqueur|grapefruit schnapps
+Green Chartreuse,55,110,FALSE,green chartreuse
+Green Curaçao,30,60,FALSE,green curaçao
+Hazelnut liqueur,24,48,FALSE,hazelnut liqueur
+Herbsaint,30,60,FALSE,herbsaint
+Highland Mist,20,40,FALSE,highland mist
+Honey liqueur,40,80,FALSE,honey liqueur
+Hpnotiq,18,36,FALSE,hpnotiq
+Irish Cream,17,34,FALSE,irish cream
+Izarra,48,96,FALSE,izarra
+Jägermeister,35,70,FALSE,jägermeister
+Kahlúa,27,54,FALSE,kahlúa|kahlua
+Kiwi liqueur,24,48,FALSE,kiwi liqueur
+Krupnik,40,80,FALSE,krupnik
+Kümmel,38,76,FALSE,kümmel
+Lambrusco Bianco,4,8,FALSE,lambrusco bianco
+Lazzaroni Amaretto,24,48,FALSE,lazzaroni amaretto
+Lemon liqueur,32,64,FALSE,lemon liqueur|italian liqueur|limoncello|lemon schnapps
+Licor 43,31,62,FALSE,licor 43
+Licorice liqueur,40,80,FALSE,licorice liqueur|anisette
+Lime liqueur,23,46,FALSE,lime schnapps|key lime liqueur
+Limoncello,32,64,FALSE,limoncello
+Malibu,24,48,FALSE,malibu
+Mango liqueur,23,46,FALSE,mango liqueur|mango schnapps
+Maraschino,40,80,FALSE,maraschino
+Mastica,47,94,FALSE,mastica
+Melon Liqueur,23,46,FALSE,melon liqueur
+Metaxa,40,80,FALSE,metaxa
+Midori,23,46,FALSE,midori
+Mint liqueur,25,50,FALSE,mint liqueur|creme de menthe|mint schnapps
+Mozart Chocolate Liqueurs,20,40,FALSE,mozart chocolate liqueurs
+Nocello,24,48,FALSE,nocello
+Nocino,35,70,FALSE,nocino
+Oghi,53,106,FALSE,oghi
+Orange liqueur,30,60,FALSE,orange bitters|orange brandy|orange schnapps|Orangecello|tangerine liqueur|triple sec|orange liqueur
+Ouzo,40,80,FALSE,ouzo
+Ouzo anise liqueur,40,80,FALSE,ouzo
+Parfait Amour,30,60,FALSE,parfait amour
+Passion-fruit liqueur,20,40,FALSE,passion-fruit liqueur
+Pastis,43,86,FALSE,pastis
+Patxaran,30,60,FALSE,patxaran
+Peach Brandy,20,40,FALSE,peach brandy
+Peach Liqueur,23,46,FALSE,peach liqueur
+Peach schnapps,23,46,FALSE,peach schnapps
+Peanut liqueur,15,30,FALSE,peanut liqueur
+Pear liqueur,40,80,FALSE,pear schnapps|poire william|xante liqueur
+Pecher Mignon,18,36,FALSE,pecher mignon
+Peppermint Schnapps,27,54,FALSE,peppermint schnapps
+Peychaud's bitters,35,70,FALSE,peychaud's bitters|peychauds bitters
+Pineau des Charentes,15,30,FALSE,pineau des charentes
+Pinot Noir,12,24,FALSE,pinot noir
+Pisang Ambon,21,42,FALSE,pisang ambon
+Pistachio liqueur,24,48,FALSE,pistachio liqueur
+Plum liqueur,40,80,FALSE,plum liqueur
+Ponche Caribe,11,22,FALSE,ponche caribe
+Ponche Crema,15,30,FALSE,ponche crema
+Ponche Diva,10,20,FALSE,ponche diva
+Ponche Kuba,9,18,FALSE,ponche kuba
+Port Wine,20,40,FALSE,port wine
+Prunelle,15,30,FALSE,prunelle
+Raki,45,90,FALSE,raki
+Raki liqueur,45,90,FALSE,raki
+Raspberry liqueur,16.5,33,FALSE,raspberry liqueur||black raspberry liqueur|creme de framboise|de kuyper raspberry liqueur|framboise raspberry liqueur|fruja raspberry|raspberry schnapps
+Red Curaçao,31,62,FALSE,red curaçao
+Rock and rye,27,54,FALSE,rock and rye
+Root beer liqueur,22.5,45,FALSE,root beer liqueur
+Rose Wine,8.6,17.2,FALSE,rose wine|rosé
+Rum,47.25,94.5,TRUE,rum
+Rum Tree,24,48,FALSE,rum tree
+Rumple Minze,50,100,FALSE,rumple minze
+Sabra liqueur,27,54,FALSE,sabra liqueur
+Saint Brendan's,17,34,FALSE,saint brendan's
+Sake,15,30,FALSE,sake
+Salmiakkikossu,40,80,FALSE,salmiakkikossu
+Sambuca,40,80,FALSE,sambuca
+Sambuca,40,80,FALSE,sambuca
+Sheridan's,16,32,FALSE,sheridan's
+Shiraz,12,24,FALSE,shiraz
+Sloe gin,26,52,FALSE,sloe gin
+Southern Comfort,35,70,FALSE,southern comfort
+Sparkling White Wine,9.8,19.6,FALSE,sparkling white wine|sparkling white|sparkling wine
+Starbucks Coffee Liqueur,20,40,FALSE,starbucks coffee liqueur
+Starbucks Cream Liqueur,15,30,FALSE,starbucks cream liqueur
+Strawberry Brandy,40,80,FALSE,strawberry brandy|strawberry liqueur
+Strega,40,80,FALSE,strega
+Sweet White Wine,10.1,20.2,FALSE,sweet white wine
+Syrah,20,40,FALSE,syrah
+Tequila,45,90,TRUE,tequila
+Tia Lusso (with cream),27,54,FALSE,tia lusso (with cream)
+Tia Maria,27,54,FALSE,tia maria
+Triple sec,30,60,FALSE,triple sec
+Tropical-fruit schnapps,15,30,FALSE,tropical-fruit schnapps|tropical-fruit liqueur
+Tsipouro,40,80,FALSE,tsipouro
+Vandermint,26,52,FALSE,vandermint
+Vermeer Dutch Chocolate Cream Liqueur,17,34,FALSE,vermeer dutch chocolate cream liqueur
+Violet liqueur,30,60,FALSE,violet liqueur|creme de violette|parma violet liqueur
+Vodka,40,80,TRUE,vodka
+Vodka,42.5,85,TRUE,vodka
+Wallace Liqueur,35,70,FALSE,wallace liqueur
+Watermelon Pucker,15,30,FALSE,watermelon pucker
+Whiskey,46.65,93.3,TRUE,whiskey
+Wild Strawberry liqueur,25,50,FALSE,wild strawberry liqueur
+Wildberry liqueur,23,46,FALSE,wildberry liqueur|wildberry schnapps
+Xtabentún,40,80,FALSE,xtabentún
+Yellow Chartreuse,40,80,FALSE,yellow chartreuse
+Yellow Curaçao,31,62,FALSE,yellow curaçao
+Yukon Jack,50,100,FALSE,yukon jack
+Zinfadel,19,38,FALSE,zinfadel
+Beer,8,16,FALSE,beer

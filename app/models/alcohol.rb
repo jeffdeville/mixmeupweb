@@ -1,4 +1,5 @@
 class Alcohol < ActiveRecord::Base
+  has_many :ingredients
   scope :primary, -> { where(is_primary: true) }
   after_save :clear_cache
   @@cache = nil
@@ -12,11 +13,19 @@ class Alcohol < ActiveRecord::Base
   end
 
   def self.match_ingredient(ingredient_text)
-    # Alcohol.all
+    all_alcohols.find do |alcohol|
+      alcohol.matches?(ingredient_text)
+    end
   end
 
   def has_proof?
     proof.present?
+  end
+
+  def matches?(text)
+    search_terms.any? do |search_term|
+      /#{search_term}/i =~ text
+    end
   end
 
   private
