@@ -3,7 +3,7 @@ FactoryGirl.define do
     factory :vodka_ingredient do
       units "oz"
       quantity 4
-      name vodka
+      name "vodka"
     end
 
     factory :blueberries_ingredient do
