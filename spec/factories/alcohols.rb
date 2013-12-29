@@ -10,6 +10,12 @@ FactoryGirl.define do
       search_terms ['vodka']
     end
 
+    factory :orange_liqueur do
+      name "Orange liqueur"
+      proof 30
+      search_terms ['orange liqueur']
+    end
+
     factory :brandy, traits: [:primary] do
       name "Brandy"
       proof 40

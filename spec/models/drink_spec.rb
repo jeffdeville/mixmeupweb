@@ -1,4 +1,5 @@
 require 'spec_helper'
+require "phys/units"
 
 describe Drink do
   describe ".create" do
@@ -25,10 +26,29 @@ describe Drink do
     end
   end
 
-  # describe ".calculate_proof" do
-  #   before { create :vodka }
-  #   subject { create :blueberry_lemon_fizz } # 4oz of vodka, at 60 proof
-  #   specify {expect(drink.total_alcohol).to eq 200 }
-  # end
+  context "when calculating the alcohol content" do
+    Q = Phys::Quantity
+    U = Phys::Unit
+
+    describe "#total_alcohol" do
+      context "with just a single alcohol in floz" do
+        subject { create :blueberry_lemon_fizz }
+        specify { subject.total_alcohol.should eq_with_units Q[0.8, 'floz'] }
+      end
+
+      context "with multiple alcohols in different dimensions" do
+        subject { create :bavarian_wild_berry_cosmo }
+        specify { subject.total_alcohol.should eq_with_units Q[0.275, "floz"] }
+      end
+    end
+
+    describe "#total_volume" do
+      # specify { expect(subject.total_alcohol).to eq 100 }
+    end
+
+    # describe "#calculate_proof" do
+    #   specify { expect(subject.calculate_proof).to eq(30) }
+    # end
+  end
 end
 
