@@ -1,28 +1,28 @@
-RSpec::Matchers.define :have_calories do
+RSpec::Matchers.define :have_drinkattribute_calories do
   match do |recipe_hash|
     recipe_hash[:calories].to_i == recipe_hash[:calories] && recipe_hash[:calories] > 0
   end
 end
 
-RSpec::Matchers.define :have_name do |name|
+RSpec::Matchers.define :have_drinkattribute_name do |name|
   match do |recipe_hash|
     recipe_hash[:name].present? && recipe_hash[:name] == name
   end
 end
 
-RSpec::Matchers.define :have_instructions do |name|
+RSpec::Matchers.define :have_drinkattribute_instructions do |name|
   match do |recipe_hash|
     recipe_hash[:instructions].length > 0
   end
 end
 
-RSpec::Matchers.define :have_alcohols do |name|
+RSpec::Matchers.define :have_drinkattribute_alcohols do |name|
   match do |recipe_hash|
     recipe_hash[:alcohols].length > 0
   end
 end
 
-RSpec::Matchers.define :have_attribution do
+RSpec::Matchers.define :have_drinkattribute_attribution do
   match do |recipe_hash|
     (recipe_hash.keys & keys) == keys
   end
@@ -36,7 +36,13 @@ RSpec::Matchers.define :have_attribution do
   end
 end
 
-RSpec::Matchers.define :have_photos do
+RSpec::Matchers.define :have_drinkattribute_ingredients do
+  match do |recipe_hash|
+    recipe_hash[:ingredients_attributes].length > 0
+  end
+end
+
+RSpec::Matchers.define :have_drinkattribute_photos do
   match do |recipe_hash|
     photos = get_photos(recipe_hash)
     get_photos(recipe_hash).present? &&

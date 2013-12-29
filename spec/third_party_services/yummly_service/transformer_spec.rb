@@ -23,6 +23,7 @@ describe YummlyService::Transformer do
           url: "http://www.yummly.com/recipe/Limoncello-II-AllRecipes",
           text: "Limoncello II recipes: information powered by Yummly"
         },
+        yield: "makes 4 servings",
         images:[
           {
             imageUrlsBySize: {
@@ -39,16 +40,12 @@ describe YummlyService::Transformer do
     let!(:recipe_attributes) { subject.call(yummly_hash) }
 
     it "should have mapped the attributes correctly" do
-      expect(recipe_attributes).to have_calories
-      expect(recipe_attributes).to have_name("name")
-      expect(recipe_attributes).to have_instructions
-      expect(recipe_attributes).to have_alcohols
-      expect(recipe_attributes).to have_attribution
-      expect(recipe_attributes).to have_photos
-      # Don't test for this, because this is a calculation that should rightly take place
-      # outside of the mapping from yummly, because the info comes form the ingredient lines
-      # expect(recipe_attributes).to have_proof
-      # expect(recipe_attributes).to have_girliness
+      expect(recipe_attributes).to have_drinkattribute_calories
+      expect(recipe_attributes).to have_drinkattribute_name("name")
+      expect(recipe_attributes).to have_drinkattribute_instructions
+      expect(recipe_attributes).to have_drinkattribute_ingredients
+      expect(recipe_attributes).to have_drinkattribute_attribution
+      expect(recipe_attributes).to have_drinkattribute_photos
     end
   end
   ###################################

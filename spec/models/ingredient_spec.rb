@@ -4,7 +4,7 @@ require "phys/units"
 
 describe Ingredient do
   describe '#assign_alcohol' do
-    before(:all) { load_alcohols }
+    before { load_alcohols }
 
     context "when ingredient don't have an alcohol" do
       subject { create :blueberries_ingredient }
