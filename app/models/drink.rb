@@ -11,18 +11,7 @@ class Drink < ActiveRecord::Base
   end
 
   def total_alcohol
-    ingredients.reduce(Q[0,'floz']) do |sum, ingredient|
-      if ingredient.alcohol.nil?
-        sum
-      elsif ingredient.quantity.blank?
-        raise ArgumentError, "Drink has an alcohol without a quantity, so proof can't be calculated"
-      elsif ingredient.units.blank?
-        raise ArgumentError, "Drink has an alcohol without units, so proof can't be calculated"
-      else
-        abv = (ingredient.alcohol.proof / 2.0) / 100
-        sum + (Q[ingredient.quantity.to_f, ingredient.units.downcase] * abv)
-      end
-    end
+    ingredients.map(&:alcohol_in_floz).reduce(Q[0.0,'floz'], :+)
   end
 
   def total_volume
