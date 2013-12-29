@@ -14,6 +14,10 @@ class Drink < ActiveRecord::Base
     ingredients.reduce(Q[0,'floz']) do |sum, ingredient|
       if ingredient.alcohol.nil?
         sum
+      elsif ingredient.quantity.blank?
+        raise ArgumentError, "Drink has an alcohol without a quantity, so proof can't be calculated"
+      elsif ingredient.units.blank?
+        raise ArgumentError, "Drink has an alcohol without units, so proof can't be calculated"
       else
         abv = (ingredient.alcohol.proof / 2.0) / 100
         sum + (Q[ingredient.quantity.to_f, ingredient.units.downcase] * abv)

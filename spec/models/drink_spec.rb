@@ -40,6 +40,16 @@ describe Drink do
         subject { create :bavarian_wild_berry_cosmo }
         specify { subject.total_alcohol.should eq_with_units Q[0.275, "floz"] }
       end
+
+      context "with an alcohol missing quantity" do
+        subject { create :drink_with_alcohol_without_quantity }
+        specify { expect{subject.total_alcohol}.to raise_error "Drink has an alcohol without a quantity, so proof can't be calculated" }
+      end
+
+      context "with an alcohol missing unit" do
+        subject { create :drink_with_alcohol_without_unit }
+        specify { expect{subject.total_alcohol}.to raise_error "Drink has an alcohol without units, so proof can't be calculated" }
+      end
     end
 
     describe "#total_volume" do

@@ -40,5 +40,17 @@ FactoryGirl.define do
         FactoryGirl.create :orange_liqueur_ingredient, :with_alcohol, :as_tbsp, quantity: 1, drink: drink
       end
     end
+
+    factory :drink_with_alcohol_without_quantity do
+      after(:create) do |drink|
+        FactoryGirl.create :vodka_ingredient, :with_alcohol, quantity: nil, drink: drink
+      end
+    end
+
+    factory :drink_with_alcohol_without_unit do
+      after(:create) do |drink|
+        FactoryGirl.create :vodka_ingredient, :with_alcohol, units: nil, drink: drink
+      end
+    end
   end
 end
